@@ -1,0 +1,57 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+select:focus option:first-of-type {
+  display: none;
+}
+body {
+  min-height: 100vh;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  height: 100%;
+}
+.header {
+  text-align: center;
+  padding: 20px 0;
+}
+.header h1 {
+  margin-bottom: 20px;
+}
+.header select {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.slideshow {
+  background-color: grey;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  opacity: 0;
+  transform: scale(1);
+  transition: all 0.9s ease-in-out;
+}
+.slide:nth-last-child(2) {
+  opacity: 1;
+  transform: scale(1.08);
+}
